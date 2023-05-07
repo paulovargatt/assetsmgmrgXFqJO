@@ -1,4 +1,24 @@
 @charset "UTF-8";
+.magus-pv1 .vsl {
+  position: relative;
+  overflow: hidden;
+  max-width: 770px;
+  margin: 15px auto;
+  width: 100%;
+}
+.magus-pv1 .vsl:before {
+  content: "";
+  display: block;
+  padding-top: 56.25%;
+}
+.magus-pv1 .vsl video, .magus-pv1 .vsl embed, .magus-pv1 .vsl iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
 .magus-pv1.magus-pv1 {
   margin: 0;
   font-family: "IBM Plex Sans", sans-serif !important;
@@ -79,6 +99,8 @@
   .magus-pv1 .menu ul {
     display: none;
   }
+}
+@media screen and (max-width: 600px) {
   .magus-pv1 .menu.active .hamburger {
     display: block;
   }
@@ -133,6 +155,7 @@
 }
 .magus-pv1 .bg-hero .headline h1 {
   color: #fff;
+  font-family: "IBM Plex Sans", sans-serif !important;
   margin-top: 33px;
   margin-bottom: 24px;
   text-align: center;
@@ -177,21 +200,6 @@
   fill: #fff;
   transform-origin: center;
 }
-.magus-pv1 .vsl {
-  max-width: 800px;
-  margin: 0 auto;
-  position: relative;
-  padding-top: 25px;
-  height: 0;
-}
-.magus-pv1 .vsl iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-}
 .magus-pv1 nav {
   position: fixed;
   top: 0;
@@ -202,8 +210,7 @@
 }
 .magus-pv1 nav.active {
   background: rgba(17, 0, 11, 0.6);
-  -webkit-backdrop-filter: blur(12.1px);
-          backdrop-filter: blur(12.1px);
+  backdrop-filter: blur(12.1px);
 }
 .magus-pv1 .section {
   max-width: 1140px;
@@ -341,6 +348,7 @@
   font-weight: 700;
   color: #000;
   box-shadow: rgb(255, 178, 0) 0px 5px 0px;
+  text-align: center;
   position: relative;
   min-width: 250px;
   text-decoration: none;
@@ -790,16 +798,22 @@
   }
 }
 
-.magus-pv2 .vsl {
-  max-width: 800px;
-  margin: 0 auto;
-  position: relative;
-  padding-top: 56.25%;
-  height: 0;
-  overflow: hidden;
+.magus-pv2 {
+  font-family: "Raleway", sans-serif;
 }
-.magus-pv2 .vsl iframe,
-.magus-pv2 .vsl video {
+.magus-pv2 .vsl {
+  position: relative;
+  overflow: hidden;
+  max-width: 770px;
+  margin: 15px auto;
+  width: 100%;
+}
+.magus-pv2 .vsl:before {
+  content: "";
+  display: block;
+  padding-top: 56.25%;
+}
+.magus-pv2 .vsl video, .magus-pv2 .vsl embed, .magus-pv2 .vsl iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -807,28 +821,107 @@
   height: 100%;
   border-radius: 10px;
 }
-.magus-pv2 .container {
-  width: 100%;
-  max-width: 1140px;
+.magus-pv2 .hero {
+  text-align: center;
+  color: #fff;
+  padding: 20px;
 }
-.magus-pv2 .gradient-pv2 {
+.magus-pv2 .hero.gradient-pv2 {
   background: linear-gradient(to right, #3cc871, #11998e);
-  height: 770px;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+}
+.magus-pv2 .hero .sub-headline {
+  font-size: 1.5em;
+  color: #fff;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.magus-pv2 .hero .headline {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.magus-pv2 .hero .headline h1 {
+  font-weight: 800;
+  font-size: 2.3em;
+}
+.magus-pv2 .hero .headline p {
+  font-size: 1.2em;
+  margin: 20px 0 0 0;
+}
+.magus-pv2 #oquee {
+  background: #f2f2f2;
+  position: relative;
+  padding: 25px;
+}
+.magus-pv2 #oquee .container {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding: 20px;
+  align-items: center;
+}
+.magus-pv2 #oquee .container .colum {
+  width: 100%;
+  padding: 16px;
+}
+.magus-pv2 #oquee .container h1 {
+  font-weight: 800;
+  color: #4f4e4e;
+}
+.magus-pv2 #oquee .container h1 span {
+  color: #139c8c;
+  text-transform: capitalize;
+}
+.magus-pv2 #oquee .container p {
+  font-size: 1.2em;
+  color: #767676;
+  text-align: left;
+  line-height: 1.7;
 }
 .magus-pv2 .btn-conversion {
-  font-size: 26px;
+  font-size: 1.5em;
   font-weight: 600;
   text-shadow: 0px 0px 10px rgba(23, 77, 0, 0.91);
   fill: #fff;
   color: #fff;
   background-color: transparent;
-  background-image: linear-gradient(180deg, #ff6641 56%, #ff7925 100%);
+  background-image: linear-gradient(30deg, #ff6641 56%, #ff7925 100%);
   border-style: solid;
   border-width: 0 0 4px;
   border-color: #bd391f;
   border-radius: 15px;
   padding: 16px 20px;
-  width: 90%;
+  width: 100%;
   margin: 12px auto;
+  text-decoration: none;
+  display: block;
+  max-width: 770px;
 }
+.magus-pv2 .btn-conversion.v2 {
+  background: linear-gradient(to right, #3cc871, #11998e);
+  border-color: #11998e;
+}
+.magus-pv2 .custom-shape-divider-bottom-1683417921 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+.magus-pv2 .custom-shape-divider-bottom-1683417921 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 61px;
+  transform: rotateY(180deg);
+}
+.magus-pv2 .custom-shape-divider-bottom-1683417921 .shape-fill {
+  fill: #FFFFFF;
+}
+
 /*# sourceMappingURL=app.css.map */
